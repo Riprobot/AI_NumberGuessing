@@ -2,6 +2,8 @@
 CNN based torch neural network for guessing number from 0 to 9.
 # Dataset
 MNIST dataset with self-implemented data augumentation
+# Model
+PyTorch CNN model, trained on 
 # Application
 Bacis application on PyGame for testing model
 # How to use
