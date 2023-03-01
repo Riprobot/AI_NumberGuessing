@@ -7,5 +7,5 @@ Bacis application on PyGame for testing model
 # How to use
 * clone this repo
 * run ```main.py```
-* or run output/main.exe 
+* or run ```output/main.exe```
 # Example 
