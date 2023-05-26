@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import sys
 import os
 
+
 def resource_path(relative_path):
     try:
         # PyInstaller creates a temp folder and stores path in _MEIPASS
@@ -17,6 +18,8 @@ def resource_path(relative_path):
         base_path = os.path.abspath(".")
 
     return os.path.join(base_path, relative_path)
+
+
 class Network(nn.Module):
     def __init__(self):
         super(Network, self).__init__()
@@ -42,9 +45,13 @@ class Network(nn.Module):
         output = self.fc1(output)
 
         return output
+
+
 model = Network()
-model.load_state_dict(torch.load(resource_path('model\\v4.pth'), map_location=torch.device('cpu')))
+model.load_state_dict(torch.load(resource_path('model/v4.pth'), map_location=torch.device('cpu')))
 model.eval()
+
+
 def get_result(image):
     np_array = np.array(image).transpose()
     img_to_model = np.reshape(np_array, (1, 1, 28, 28))
